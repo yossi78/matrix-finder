@@ -5,9 +5,7 @@ import javafx.util.Pair;
 
 
 
-
 public class MatrixFinder {
-
 
     public List<Pair<Integer,Integer>> findPathToTarget(int[][] arr, Pair startPoint, Integer targetValue){
         List<Pair<Integer,Integer>> solution=new ArrayList<>();

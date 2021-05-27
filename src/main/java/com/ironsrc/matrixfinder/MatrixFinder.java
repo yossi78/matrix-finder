@@ -35,7 +35,7 @@ public class MatrixFinder {
         Pair<Integer,Integer> left=new Pair<>(currentPoint.getKey(),currentPoint.getValue()-1);
         List<Pair<Integer,Integer>> options=addPairsToList(arr,solution,above,below,right,left);
         Integer horizontalDirection=findHorizontalDirection(arr,currentPoint,targetPoint);
-        Integer vertialDirection=findVerticalDirection(arr,currentPoint,targetPoint);
+        Integer vertialDirection=findVerticalDirection(currentPoint,targetPoint);
         Pair nextPair=findByDirections(arr,solution,options,horizontalDirection,vertialDirection,currentPoint);
         return nextPair;
     }
@@ -100,7 +100,7 @@ public class MatrixFinder {
         return 0;
     }
 
-    private Integer findVerticalDirection(int[][] arr, Pair<Integer,Integer> startPoint,Pair<Integer,Integer> targetPoint) {
+    private Integer findVerticalDirection(Pair<Integer,Integer> startPoint,Pair<Integer,Integer> targetPoint) {
         if(targetPoint.getKey()>startPoint.getKey()){
             return 1;
         }
